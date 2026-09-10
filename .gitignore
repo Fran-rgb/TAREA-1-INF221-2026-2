@@ -1,0 +1,14 @@
+# Archivos temporales de LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Archivos de sistema / compilación
+*.o
+*.exe

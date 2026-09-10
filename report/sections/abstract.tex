@@ -1,0 +1,16 @@
+En este trabajo se presenta un estudio comparativo del rendimiento
+practico frente a la complejidad teórica de algoritmos de
+ordenamiento de arreglos unidimensionales (MergeSort, QuickSort,
+PatienceSort y Sort) y de multiplicación de matrices cuadradas
+(Naive y Strassen). Las pruebas fueron implementadas en C++ y
+configuradas para medir el tiempo de ejecución y uso de memoria
+auxiliar (\textit{Peak RSS}) de cada algoritmo bajo diversas condiciones de entrada.
+Los resultados indican que Sort es la alternativa más
+eficiente e in-place para ordenamiento, mientras que QuickSort muestra
+una alta sensibilidad a recibir de entrada arreglos ordenados, aumentando
+su tiempo de ejecución a $O(n^2)$ por la partición de Lomuto.
+Para multiplicación de matrices en dimensiones $n \le 1024$,
+el algoritmo Naive superó a Strassen tanto en tiempo como en
+memoria ($1300\text{ KB}$ frente a $6700\text{ KB}$),
+evidenciando que el \textit{overhead} recursivo predomina
+sobre la ventaja asintótica en dimensiones pequeñas y medianas.

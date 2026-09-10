@@ -1,0 +1,40 @@
+Los experimentos fueron ejecutados en un entorno Linux
+sobre WSL (Windows Subsystem for Linux), utilizando un
+procesador AMD Ryzen 3 7320U with Radeon Graphics (2.40 GHz),
+Sistema operativo de 64 bits, procesador x64 y 8 GB de memoria
+RAM. Los programas principales fueron implementados en C++17
+y compilados con \texttt{g++} utilizando el nivel de
+optimización predeterminado vía \texttt{Makefile}. 
+
+\vspace{0.4cm}
+
+La medición de tiempo se realizó con la librería estándar
+\texttt{<chrono>} (\texttt{high\_resolution\_clock}),
+mientras que el consumo de memoria \textit{Peak RSS} se
+registró mediante la función \texttt{getrusage()} de la
+cabecera POSIX \texttt{<sys/resource.h>}. 
+
+\vspace{0.4cm}
+
+Para las pruebas de ordenamiento se generaron arreglos
+unidimensionales mediante un script de python con tamaños 
+$n \in \{10^1, 10^3, 10^5, 10^7\}$, considerando tres tipos
+de orden inicial (\textit{ascendente},
+\textit{descendente}, \textit{aleatorio}) y dos dominios de
+valores ($D1: [0, 9]$ y $D7: [0, 10^7]$),
+con lo cual se construye el dataset de arreglos. 
+
+\vspace{0.4cm}
+
+Para las pruebas de multiplicación de matrices, se generaron 
+matrices mediante un script de python utilizando dimensiones
+$n \in \{2^4, 2^6, 2^8, 2^{10}\}$ en tres estructuras
+(\textit{densa}, \textit{diagonal}, \textit{dispersa})
+sobre los dominios $D0: \{0, 1\}$ y $D10: [0, 9]$, con lo cual
+se construye el dataset de matrices. 
+
+\vspace{0.4cm}
+
+Las visualizaciones graficas fueron generadas mediante
+scripts de Python usando las libreria \texttt{pandas} y
+\texttt{seaborn}.
